@@ -1,5 +1,6 @@
 ---
 # This playbook deploys the whole application stack in this site.
+# Intended for s3a support
 
 - name: apply common configuration to all nodes
   hosts: all:!localhost
