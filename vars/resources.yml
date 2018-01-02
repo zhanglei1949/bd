@@ -5,6 +5,7 @@ tarball_prefix: 'https://bd-dist.s3.amazonaws.com'
 tarball_prefix: '/home/Tarball'
 
 hadoop_tarball: 'hadoop-2.8.1.tar.gz'
+#hadoop_tarball: 'hadoop-2.7.3.tar.gz'
 hive_tarball: 'apache-hive-2.1.1-bin.tar.gz'
 spark_tarball: 'spark-2.2.0-bin-without-hadoop-with-hive.tgz'
 
