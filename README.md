@@ -1,3 +1,18 @@
+# Multi-version Hadoop Deployment and Manager
+
+Utilize this Ansible-playbook, I implement a muli-version Hadoop deployment script, which support deploying multiple version Hadoop on same cluster, and allowing switching among different versions. The key implementation is in ```deploy.sh```
+
+## Usage 
+This script is built over [bd playbook](https://github.com/Intel-bigdata/bd).
+### Deploy
+```./deploy.sh -i```
+
+This command will install the hadoop(and other packages) specified in ./vars/resources.yml. If a previous hadoop is installed, it will be moved to ``/hadoop-backup/``, and it will renamed with a unique name (hadoop+version+date+0/1/2...).
+### Roll Back
+
+```./deploy.sh -r [name of previous installed hadoop]```
+
+Running this script, the current hadoop in use will be backed up, and the previous install hadoop will be recovered to ``/hadoop``
 # About
 
 This is an Ansible Playbook to deploy data lab environments with any number of
